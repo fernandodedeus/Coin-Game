@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://7110787j12qx"]
+
+[ext_resource type="Script" uid="uid://ddjcbktaetxjn" path="res://Novo_projeto_aula_sexta/player.gd" id="1_dgbdq"]
+[ext_resource type="Texture2D" uid="uid://by3bjr2g5qlus" path="res://Novo_projeto_aula_sexta/gigicat.png" id="2_6g7nm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dgbdq"]
+size = Vector2(118, 93)
+
+[node name="Node2D" type="Node2D" unique_id=551338964]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1602907936 groups=["Player"]]
+collision_mask = 2
+script = ExtResource("1_dgbdq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=358512674]
+position = Vector2(1.9073486e-06, -12)
+scale = Vector2(0.316, 0.316)
+texture = ExtResource("2_6g7nm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1490767132]
+position = Vector2(-2, -14.5)
+shape = SubResource("RectangleShape2D_dgbdq")

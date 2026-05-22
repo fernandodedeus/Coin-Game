@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dakmhl6hcbpnt"]
+
+[ext_resource type="Script" uid="uid://c33sdu7mwcatw" path="res://Novo_projeto_aula_sexta/coin.gd" id="1_k1pv8"]
+[ext_resource type="Texture2D" uid="uid://b8upn3lrr7bg1" path="res://Novo_projeto_aula_sexta/peixe.png" id="2_73hf0"]
+[ext_resource type="AudioStream" uid="uid://c4hxruhc7psp7" path="res://Novo_projeto_aula_sexta/coin_[cut_1sec].wav" id="3_73hf0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k1pv8"]
+size = Vector2(70, 50)
+
+[node name="Coin" type="Area2D" unique_id=980811132]
+collision_layer = 2
+script = ExtResource("1_k1pv8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1140919204]
+position = Vector2(-4.7683716e-07, 1.9589715)
+scale = Vector2(0.19600001, 0.1721641)
+texture = ExtResource("2_73hf0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1804250551]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_k1pv8")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1275267251]
+stream = ExtResource("3_73hf0")
+autoplay = true

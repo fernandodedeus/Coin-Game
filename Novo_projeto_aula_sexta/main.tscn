@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://i83dedxrheo8"]
+
+[ext_resource type="PackedScene" uid="uid://7110787j12qx" path="res://Novo_projeto_aula_sexta/Player.tscn" id="1_ac852"]
+[ext_resource type="Script" uid="uid://bi68bgmor4ix4" path="res://Novo_projeto_aula_sexta/main.gd" id="1_kjakr"]
+[ext_resource type="Texture2D" uid="uid://daah0o26bf20l" path="res://Novo_projeto_aula_sexta/ChatGPT Image 25 de abr. de 2026, 16_41_34.png" id="3_x7e3c"]
+
+[node name="Main" type="Node2D" unique_id=1332391148]
+script = ExtResource("1_kjakr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=36161359]
+position = Vector2(577, 329.49872)
+scale = Vector2(0.7513021, 0.6435522)
+texture = ExtResource("3_x7e3c")
+
+[node name="Player" parent="." unique_id=551338964 instance=ExtResource("1_ac852")]
+position = Vector2(362, 343)
+
+[node name="CoinSpawnTimer" type="Timer" parent="." unique_id=1274560655]
+wait_time = 2.0
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1648342527]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1986271614]
+anchors_preset = -1
+anchor_left = 0.009000001
+anchor_top = 0.027
+anchor_right = 0.009000001
+anchor_bottom = 0.027
+offset_left = -0.36800098
+offset_top = -11.496
+offset_right = 140.632
+offset_bottom = 11.504
+text = "Pontuação: 0"
